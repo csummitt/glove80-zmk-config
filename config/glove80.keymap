@@ -24,7 +24,7 @@
 
 /* Helper Macros, based on https://github.com/urob/zmk-helpers/ */
 
-#pragma once
+//#pragma once
 
 #define ZMK_HELPER_STRINGIFY(x) #x
 
@@ -347,76 +347,112 @@
 
         /* ===== Core layer colors (F-key identity LEDs) ===== */
 
-        ls_default {
+        ls_default: ls_default{
+            compatible = "zmk,rgb-segment";
             leds = <34>;                 /* F1 */
             color = <117 117 117>;       /* DEFAULT – Sonic Silver */
         };
 
-        ls_def_game {
+        ls_def_game: ls_def_game{
+            compatible = "zmk,rgb-segment";
             leds = <28>;                 /* F2 */
             color = <102 51 153>;        /* GAME – Rebecca Purple */
         };
 
-        ls_game {
+        ls_game: ls_game{
+            compatible = "zmk,rgb-segment";
             leds = <34>;                 /* F1 */
             color = <102 51 153>;        /* GAME – Rebecca Purple */
         };
 
-        ls_def_fps {
+        ls_def_fps: ls_def_fps{
+            compatible = "zmk,rgb-segment";
             leds = <22>;                 /* F3 */
             color = <255 0 0>;           /* FPS – Red */
         };
 
-        ls_fps {
+        ls_fps: ls_fps{
+            compatible = "zmk,rgb-segment";
             leds = <34>;                 /* F1 */
             color = <255 0 0>;           /* FPS – Red */
         };
 
-        ls_def_rts {
+        ls_def_rts: ls_def_rts{
+            compatible = "zmk,rgb-segment";
             leds = <16>;                 /* F4 */
             color = <0 0 255>;           /* RTS – Blue */
         };
 
-        ls_rts {
+        ls_rts: ls_rts{
+            compatible = "zmk,rgb-segment";
             leds = <34>;                 /* F1 */
             color = <0 0 255>;           /* RTS – Blue */
         };
 
-        ls_def_builder {
+        ls_def_builder: ls_def_builder{
+            compatible = "zmk,rgb-segment";
             leds = <10>;                 /* F5 */
             color = <118 255 122>;       /* BUILDER – Screamin Green */
         };
 
-        ls_builder {
+        ls_builder: ls_builder{
+            compatible = "zmk,rgb-segment";
             leds = <34>;                 /* F1 */
             color = <118 255 122>;       /* BUILDER – Screamin Green */
         };
 
         /* ===== Overlay / mode colors (F1 indicator, RHS placeholder) ===== */
 
-        ls_modeling {
+        ls_modeling: ls_modeling{
+            compatible = "zmk,rgb-segment";
             leds = <34>;                 /* F1 */
             color = <252 194 0>;         /* MODELING – Golden Poppy */
         };
 
-        ls_chat {
+        ls_chat: ls_chat{
+            compatible = "zmk,rgb-segment";
             leds = <34>;                 /* F1 */
             color = <10 186 181>;        /* CHAT – Teal */
         };
 
-        ls_utility {
+        ls_utility: ls_utility{
+            compatible = "zmk,rgb-segment";
             leds = <34>;                 /* F1 */
             color = <72 61 139>;         /* UTILITY – Cyan */
         };
 
         /* ===== LayerSelect letter keys (placeholders until RHS mapping) ===== */
 
-        ls_ls_default { leds = <24>; color = <117 117 117>; }; /* W */
-        ls_ls_game    { leds = <18>; color = <102 51 153>; }; /* E */
-        ls_ls_fps     { leds = <12>; color = <255 0 0>; };    /* R */
-        ls_ls_rts     { leds = <25>; color = <0 0 255>; };    /* S */
-        ls_ls_build   { leds = <19>; color = <118 255 122>; };/* D */
-        ls_ls_model   { leds = <13>; color = <252 194 0>; };  /* G */
+        ls_ls_default: ls_ls_default {
+            compatible = "zmk,rgb-segment";
+            leds = <24>;
+            color = <117 117 117>;
+        }; /* W */
+        ls_ls_game: ls_ls_game   {
+            compatible = "zmk,rgb-segment";
+            leds = <18>;
+            color = <102 51 153>;
+        }; /* E */
+        ls_ls_fps: ls_ls_fps    { 
+            compatible = "zmk,rgb-segment";
+            leds = <12>; 
+            color = <255 0 0>;
+        };    /* R */
+        ls_ls_rts: ls_ls_rts    { 
+            compatible = "zmk,rgb-segment";
+            leds = <25>;
+            color = <0 0 255>;
+        };    /* S */
+        ls_ls_build: ls_ls_build  {
+            compatible = "zmk,rgb-segment"; 
+            leds = <19>;
+            color = <118 255 122>;
+        };/* D */
+        ls_ls_model: ls_ls_model   {
+            compatible = "zmk,rgb-segment";
+            leds = <13>;
+            color = <252 194 0>;
+        };  /* G */
     };
 };
 
